@@ -41,3 +41,11 @@ p:last-of-type a {
 .changeH1 {
   color: green !important;
 }
+
+.change-bk {
+  background-color: purple !important;
+}
+
+aside div:nth-child(3) ol > li > a {
+  color: purple;
+}

@@ -184,7 +184,10 @@
         </nav>
       </div>
 
-      <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+      <div
+        class="jumbotron p-4 p-md-5 text-white rounded bg-dark"
+        onclick="changeBk()"
+      >
         <div class="col-md-6 px-0">
           <h1 class="display-4 font-italic" onclick="changeH1()">
             Title of a longer featured blog post
@@ -582,7 +585,7 @@
           </div>
 
           <div class="p-4">
-            <h4 class="font-italic">Elsewhere</h4>
+            <h4 class="font-italic" onclick=" removeElse()">Elsewhere</h4>
             <ol class="list-unstyled">
               <li>
                 <a
@@ -661,6 +664,16 @@
       function changeH1() {
         let changeColor = document.querySelector(".jumbotron h1");
         changeColor.classList.add(`changeH1`);
+      }
+
+      function changeBk() {
+        let changeBack = document.querySelector(".jumbotron");
+        changeBack.classList.add(`change-bk`);
+      }
+
+      function removeElse() {
+        let removeElsewhere = document.querySelector("aside div:nth-child(3)");
+        removeElsewhere.remove();
       }
     </script>
   </body>
