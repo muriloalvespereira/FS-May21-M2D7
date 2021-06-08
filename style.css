@@ -1,0 +1,27 @@
+.jumbotron h1 {
+  color: red;
+}
+
+.nav a {
+  color: red !important;
+}
+
+.jumbotron div p a {
+  color: red !important;
+}
+
+.blog-post:first-of-type {
+  color: green;
+}
+
+.nav a:nth-last-of-type(2n + 1) {
+  color: green !important;
+}
+
+.blog-post:last-of-type {
+  color: purple;
+}
+
+aside div:nth-last-of-type(2n + 2) ol > li > a {
+  color: red;
+}
