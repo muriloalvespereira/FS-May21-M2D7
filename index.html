@@ -180,17 +180,13 @@
             href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/874889979811164.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA2TAWW44RCEE6YREN%2F20210608%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210608T122530Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27index.html&amp;X-Amz-Signature=79c8c7e2d4b7a1c62ff3aafc752af76f593377bc9f2bd0ba9444809e93ffa6ac#"
             >Style</a
           >
-          <a
-            class="p-2 text-muted"
-            href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/874889979811164.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA2TAWW44RCEE6YREN%2F20210608%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210608T122530Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27index.html&amp;X-Amz-Signature=79c8c7e2d4b7a1c62ff3aafc752af76f593377bc9f2bd0ba9444809e93ffa6ac#"
-            >Travel</a
-          >
+          <a class="p-2 text-muted" onclick="linkNav()" href="#">Travel</a>
         </nav>
       </div>
 
       <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
-          <h1 class="display-4 font-italic">
+          <h1 class="display-4 font-italic" onclick="changeH1()">
             Title of a longer featured blog post
           </h1>
           <p class="lead my-3">
@@ -641,18 +637,31 @@
 
     <script>
       /*
-        JS Exercises
-        EX11) Write a function to add a new link into the navbar
-        EX12) Write a function to change the color of the main title
-        EX13) Write a function to change the background of the jumbotron
-        EX14) Write a function to remove all the links under "Elsewhere"
-        EX15) Write a function to change the column size for heading in jumbotron
-        EX16) Write a function to remove the "Search" magnifying glass icon
-        EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
-        EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
-        EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
-        EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
-    */
+          JS Exercises
+          EX11) Write a function to add a new link into the navbar
+          EX12) Write a function to change the color of the main title
+          EX13) Write a function to change the background of the jumbotron
+          EX14) Write a function to remove all the links under "Elsewhere"
+          EX15) Write a function to change the column size for heading in jumbotron
+          EX16) Write a function to remove the "Search" magnifying glass icon
+          EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+          EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+          EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+          EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
+      */
+
+      function linkNav() {
+        let linkNavbar = document.querySelector(".nav");
+        linkNavbar.insertAdjacentHTML(
+          "beforeend",
+          `<a class="p-2 text-muted" href="https://www.google.com">Google</a>`
+        );
+      }
+
+      function changeH1() {
+        let changeColor = document.querySelector(".jumbotron h1");
+        changeColor.classList.add(`changeH1`);
+      }
     </script>
   </body>
 </html>

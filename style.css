@@ -22,7 +22,7 @@
   color: purple;
 }
 
-aside div:nth-last-of-type(1n + 2) ol > li > a {
+aside div:nth-child(2) ol > li > a {
   color: red;
 }
 
@@ -35,5 +35,9 @@ footer {
 }
 
 p:last-of-type a {
-  color: white !important;
+  color: white;
+}
+
+.changeH1 {
+  color: green !important;
 }
