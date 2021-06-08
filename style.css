@@ -29,3 +29,11 @@ aside div:nth-last-of-type(1n + 2) ol > li > a {
 .blog-post:nth-child(3) {
   color: yellow;
 }
+
+footer {
+  background-color: red;
+}
+
+p:last-of-type a {
+  color: white !important;
+}
