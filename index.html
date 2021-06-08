@@ -91,10 +91,7 @@
             >
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
-            <a
-              class="text-muted"
-              href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/874889979811164.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA2TAWW44RCEE6YREN%2F20210608%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210608T122530Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27index.html&amp;X-Amz-Signature=79c8c7e2d4b7a1c62ff3aafc752af76f593377bc9f2bd0ba9444809e93ffa6ac#"
-            >
+            <a onclick="deleteSearch()" class="text-muted" href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -679,6 +676,13 @@
       function changeCol() {
         let changeColumn = document.querySelector(".jumbotron > div");
         changeColumn.classList.add(`col-md-12`);
+      }
+
+      function deleteSearch() {
+        let deleteS = document.querySelector(
+          "header div.row div:nth-child(3) > a > svg"
+        );
+        deleteS.remove();
       }
     </script>
   </body>

@@ -49,3 +49,7 @@ p:last-of-type a {
 aside div:nth-child(3) ol > li > a {
   color: purple;
 }
+
+header div.row div:nth-child(3) > a > svg {
+  color: purple;
+}
