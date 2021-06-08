@@ -22,6 +22,10 @@
   color: purple;
 }
 
-aside div:nth-last-of-type(2n + 2) ol > li > a {
+aside div:nth-last-of-type(1n + 2) ol > li > a {
   color: red;
+}
+
+.blog-post:nth-child(3) {
+  color: yellow;
 }
