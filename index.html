@@ -192,7 +192,7 @@
           <h1 class="display-4 font-italic" onclick="changeH1()">
             Title of a longer featured blog post
           </h1>
-          <p class="lead my-3">
+          <p class="lead my-3" onclick="changeCol()">
             Multiple lines of text that form the lede, informing new readers
             quickly and efficiently about what’s most interesting in this post’s
             contents.
@@ -674,6 +674,11 @@
       function removeElse() {
         let removeElsewhere = document.querySelector("aside div:nth-child(3)");
         removeElsewhere.remove();
+      }
+
+      function changeCol() {
+        let changeColumn = document.querySelector(".jumbotron > div");
+        changeColumn.classList.add(`col-md-12`);
       }
     </script>
   </body>
