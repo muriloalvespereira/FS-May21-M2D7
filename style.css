@@ -53,3 +53,7 @@ aside div:nth-child(3) ol > li > a {
 header div.row div:nth-child(3) > a > svg {
   color: purple;
 }
+
+.blog-pagination a:last-of-type {
+  color: purple !important;
+}

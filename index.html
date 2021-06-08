@@ -477,14 +477,12 @@
           <!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a
-              class="btn btn-outline-primary"
-              href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/874889979811164.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA2TAWW44RCEE6YREN%2F20210608%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210608T122530Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27index.html&amp;X-Amz-Signature=79c8c7e2d4b7a1c62ff3aafc752af76f593377bc9f2bd0ba9444809e93ffa6ac#"
+            <a onclick="deleteNewPost()" class="btn btn-outline-primary"
               >Older</a
             >
             <a
+              onclick="addNewPost()"
               class="btn btn-outline-secondary disabled"
-              href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/874889979811164.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA2TAWW44RCEE6YREN%2F20210608%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210608T122530Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27index.html&amp;X-Amz-Signature=79c8c7e2d4b7a1c62ff3aafc752af76f593377bc9f2bd0ba9444809e93ffa6ac#"
               tabindex="-1"
               aria-disabled="true"
               >Newer</a
@@ -683,6 +681,45 @@
           "header div.row div:nth-child(3) > a > svg"
         );
         deleteS.remove();
+      }
+
+      function blogPost() {
+        let blogPara = document.querySelectorAll(".blog-post p:nth-child(3)");
+        for (i = 0; i < blogPara.length; i++) {
+          let element = blogPara[i];
+          element.innerText = element.innerText.substring(50);
+        }
+      }
+      blogPost();
+
+      function disabledNew() {
+        let newPost1 = document.querySelector(
+          ".blog-pagination a:last-of-type"
+        );
+        newPost1.classList.remove(`disabled`);
+      }
+
+      disabledNew();
+
+      function addNewPost() {
+        let newPost = document.querySelector(".blog-pagination");
+        newPost.insertAdjacentHTML(
+          "beforebegin",
+          `<div class="blog-post">
+            <h2 class="blog-post-title">I added a new Blog with JS</h2>
+            <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est itaque vel
+        fugit, facilis amet tempora iusto totam aspernatur veniam dolores fugiat
+        ipsam necessitatibus repellat cum, cupiditate, quidem nesciunt placeat
+        sequi.
+      </p>
+            </div>`
+        );
+      }
+
+      function deleteNewPost() {
+        let newPost = document.querySelector(".blog-post:last-of-type");
+        newPost.remove();
       }
     </script>
   </body>
