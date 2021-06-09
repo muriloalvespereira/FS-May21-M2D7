@@ -721,6 +721,17 @@
         let newPost = document.querySelector(".blog-post:last-of-type");
         newPost.remove();
       }
+
+      let hoverMouse = document.querySelectorAll(
+        ".blog-post .blog-post-meta a "
+      );
+
+      for (let i = 0; i < hoverMouse.length; i++) {
+        let result = hoverMouse[i];
+        result.addEventListener(`mouseover`, function (event) {
+          alert(`Hello ${result.innerText}`);
+        });
+      }
     </script>
   </body>
 </html>

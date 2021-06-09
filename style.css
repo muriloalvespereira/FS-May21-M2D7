@@ -57,3 +57,7 @@ header div.row div:nth-child(3) > a > svg {
 .blog-pagination a:last-of-type {
   color: purple !important;
 }
+
+.blog-post .blog-post-meta a {
+  border: 1px solid salmon;
+}
